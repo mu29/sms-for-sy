@@ -9,13 +9,15 @@ class Teacher(db.Model):
     age = db.Column(db.String())
     school = db.Column(db.String())
     phone = db.Column(db.String())
-    reject = db.Column(db.Boolean())
+    contact = db.Column(db.Integer)
 
-    def __init__(self, name, subject, age, school, phone, reject):
+    def __init__(self, name, subject, age, school, phone, contact):
         self.name = name
+        self.subject = subject
+        self.age = age
+        self.school = school
         self.phone = phone
-        self.university = university
-        self.gender = gender
+        self.contact = contact
 
     def __repr__(self):
-        return '<id {}>'.format(self.id)
+        return "<Teacher(name='%s', phone='%s')>" % (self.name, self.phone)
