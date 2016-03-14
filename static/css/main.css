@@ -1,0 +1,344 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Apple SD Gothic Neo', 'NanumGothic', '나눔고딕', '맑은 고딕', sans-serif;
+    font-weight: normal;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1.75;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+::selection {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+ul li, h1, h2, h3, h4 {
+    font-family: 'Raleway', 'Apple SD Gothic Neo', 'NanumGothic', '나눔고딕', '맑은 고딕', sans-serif;
+    font-weight: 300;
+}
+@media screen and (max-width: 840px) {
+    nav ul {
+        top: 20px;
+        right: 27.5px;
+    }
+    nav ul li {
+        font-size: 8pt;
+        margin-left: 5px;
+    }
+    nav img {
+        height: 22.5px;
+    }
+    h2 {
+        font-size: 20pt;
+    }
+    h3 {
+        font-size: 15pt;
+    }
+    section {
+        padding: 50px 35px;
+    }
+    .pc {
+        display: none;
+    }
+    #main h1 {
+        font-size: 45pt;
+        letter-spacing: 9px;
+        padding-left: 9px;
+    }
+    #main h4 {
+        font-size: 10pt;
+        letter-spacing: 2px;
+        padding-left: 2px;
+        margin-top: -20px;
+        letter-spacing: 5px;
+    }
+    #intro h1 {
+        font-size: 30pt;
+    }
+
+	.desc .line {
+		width: 15px;
+	}
+
+	.apply {
+        height: 700px
+	}
+
+	.intro {
+		padding: 150px 20px;
+	}
+
+	.intro > .sub {
+		letter-spacing: 5px;
+		padding-left: 5px;
+	}
+
+	.intro h3 {
+		font-size: 25pt;
+		line-height: 1.2;
+		letter-spacing: -2.5px;
+	}
+}
+@media screen and (min-width: 841px) {
+    nav ul {
+        top: 32.5px;
+        right: 60px;
+    }
+    nav ul li {
+        font-size: 10.5pt;
+        margin-left: 25px;
+    }
+    nav img {
+        height: 35px;
+    }
+    h2 {
+        font-size: 30pt;
+    }
+    h3 {
+        font-size: 22.5pt;
+    }
+    section {
+        padding: 100px 75px;
+    }
+    .ph {
+        display: none;
+    }
+    #main h1 {
+        font-size: 60pt;
+        letter-spacing: 20px;
+        padding-left: 20px;
+    }
+    #main h4 {
+        font-size: 11pt;
+        letter-spacing: 2.5px;
+        padding-left: 2.5px;
+        margin-top: -30px;
+        letter-spacing: 5px;
+    }
+    #intro h1 {
+        font-size: 40pt;
+    }
+
+	.desc .line {
+		width: 25px;
+	}
+
+	.apply {
+        height: 700px
+	}
+
+	.intro {
+		padding: 225px 0;
+	}
+
+	.intro > .sub {
+		letter-spacing: 10px;
+		padding-left: 10px;
+	}
+
+	.intro h3 {
+		font-size: 35pt;
+		line-height: 1.2;
+		letter-spacing: -1.75px;
+	}
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0;
+    background-color: whitesmoke;
+}
+#main {
+    background: url('/static/img/main.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 0;
+}
+.cover {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+}
+.inner_contents {
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding: 5%;
+}
+.intro {
+	text-align: center;
+	background-image: url('/static/img/chance.jpg');
+	background-size: cover;
+    background-position: center;
+	color: white;
+}
+.desc {
+    background-color: white;
+	text-align: center;
+    margin: 0 auto;
+    padding: 30px;
+}
+.desc .line {
+  	border-top: 1px solid black;
+  	margin-top: 25px;
+  	margin-bottom: 25px;
+    display: inline-block;
+}
+.apply {
+    background-color: whitesmoke;
+  	text-align: center;
+    margin: 0 auto;
+}
+.forms {
+  padding: 70px 0;
+  max-width: 480px;
+  margin: 0 auto;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10px;
+    padding-bottom: 5px;
+    z-index: 10;
+}
+nav ul {
+    position: absolute;
+    margin-top: -10px;
+}
+nav ul li {
+    display: inline-block;
+    text-align: right;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav.affix {
+    -webkit-animation-name: affix;
+    -webkit-animation-duration: 0.25s;
+    animation-name: affix;
+    animation-duration: 0.25s;
+    background: rgba(0, 0, 0, 0.5);
+}
+@-webkit-keyframes affix {
+    from {
+        background: rgba(0, 0, 0, 0);
+    }
+    to {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+nav.affix img {
+    opacity: 1;
+}
+.line-divider {
+    width: 100%;
+    height: 8px;
+    background-color: black;
+}
+
+.sub-title {
+    word-spacing: 15px;
+}
+
+.info {
+  margin: 10px 0;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+}
+footer {
+	padding: 35px;
+	text-align: center;
+	background-color: #666;
+	color: white;
+}
+.form-wrapper {
+    position: absolute;
+    background: #fff;
+    max-width: 480px;
+    min-height: 100px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.header {
+    background:#3098E3;
+    font-size:24px;
+    padding:10px 10px;
+    border-radius:3px;
+    text-align:center;
+    margin-bottom:30px;
+    color:#fff;
+}
+.input-button { margin-top: 50px; }
+.input-button button {
+    color: #3098E3;
+    font-size: 32px;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 80px;
+    position: absolute;
+    bottom: -40px; right: 40%;
+    border: 0;
+    background: linear-gradient(to bottom right, #fff,#fff);
+    box-shadow: 0 6px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.input-button button:hover {
+    outline:none;
+    background:#3098E3;
+    color:#fff;
+}
+button:focus, button:active {
+    outline:none;
+}
+img#loader {
+    position:absolute;
+    top:25px;
+    left:25px;
+}
+a:active,
+a:hover {
+    color: white;
+    outline: 0
+}
