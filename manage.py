@@ -1,12 +1,9 @@
 from flask.ext.script import Manager
 from flask.ext.migrate import Migrate, MigrateCommand
+from models import Teacher
 import os
-from app import *
-from load import MODELS
 
-for module in MODELS:
-    __import__(module)
-
+from app import app, db
 app.config.from_object(os.environ['APP_SETTINGS'])
 
 migrate = Migrate(app, db)
