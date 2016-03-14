@@ -14,6 +14,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 body {
     line-height: 1.75;
+  	background-color: whitesmoke;
 }
 ol, ul {
     list-style: none;
@@ -285,7 +286,7 @@ nav.affix img {
 footer {
 	padding: 35px;
 	text-align: center;
-	background-color: #666;
+	background-color: whitesmoke;
 	color: white;
 }
 .form-wrapper {

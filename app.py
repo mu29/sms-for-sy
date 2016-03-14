@@ -26,8 +26,6 @@ def index():
                     limit(limit)
 
         for teacher in teachers:
-            print teacher.name
-            print teacher.phone
             send_message(teacher, content)
 
         return render_template('index.html', message = u'총 {0}명의 선생님에게 전송하였습니다!'.format(teachers.count()))
@@ -51,11 +49,11 @@ def send_message(teacher, message):
             },
         )
         if response.status_code == 200:
-            print u'{0} 선생님에게 메시지 전송'.format(teacher.name)
-        else:
             print ('Error ' + response.status_code)
+        #     print u'{0} 선생님에게 메시지 전송'.format(teacher.name)
+        # else:
     except requests.exceptions.RequestException:
-        print(u'메시지 전송 실패')
+        print(u'Error')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
