@@ -5,6 +5,7 @@ class Config(object):
     DEBUG = False
     TESTING = False
     SECRET_KEY = 'secretkey'
+    SQLALCHEMY_DATABASE_USER = os.environ['DATABASE_USER']
     SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
