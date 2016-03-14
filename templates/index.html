@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 설정 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- 타이틀 -->
+    <title>성렬쓰를 위한 문자 관리 페이지</title>
+    <!-- 스타일시트 -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="contents" style="display: table;width: 100%;height: 100%;">
+            <div style="display: table-cell;vertical-align: middle;text-align: center;padding-bottom: 15em">
+                <div class="apply">
+                    <div class="forms">
+                        <div class="form-wrapper">
+                            <div class="header"><h1>문자 보내기!</h1></div>
+                            <form action="" method="post" enctype="multipart/form-data">
+                                <label>성별</label>
+                                <div class="form-group">
+                                    <div class="btn-group btn-group-justified" data-toggle="buttons">
+                                        <label class="btn btn-default">
+                                            <input type="radio" name="gender" value="남자" autocomplete="off">
+                                            남자
+                                        </label>
+                                        <label class="btn btn-default">
+                                            <input type="radio" name="gender" value="여자" autocomplete="off">
+                                            여자
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <label>대학</label>
+                                <div class="form-group">
+                                    <input type="text" name="school" class="form-control" placeholder="대학명" required="true">
+                                </div>
+
+                                <label>과목</label>
+                                <div class="form-group">
+                                    <input type="text" name="subject" class="form-control" placeholder="과목명" required="true">
+                                </div>
+
+                                <label>제한인원</label>
+                                <div class="form-group">
+                                    <input type="number" name="limit" class="form-control" placeholder="보낼 최대 인원 수" required="true">
+                                </div>
+
+                                <label>문자 내용</label>
+                                <div class="form-group">
+                                    <textarea name="content" class="form-control" placeholder="문자 내용 입력" required="true" rows="5"></textarea>
+                                </div>
+
+                                <div class="input-button">
+                                    <button class="submit"><i class="fa fa-paper-plane"></i><img id="loader" src="/static/img/paper-plane.png" alt="loading image"></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    {% if message %}
+                        <div id="message" class="alert alert-info" role="alert" style="margin-top: 500px;">
+                            {{ message }}
+                        </div>
+                    {% else %}
+                        <div id="message" class="alert alert-info" role="alert" style="margin-top: 500px; display: none">
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 스크립트 로드 -->
+    <script type="text/javascript" src="/static/js/jquery-1.11.3.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+</body>
+
+</html>
