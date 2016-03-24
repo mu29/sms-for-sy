@@ -18,7 +18,7 @@ def index():
         subject = request.form['subject'].encode('utf-8')
         limit = int(request.form['limit'])
         content = request.form['content'].encode('utf-8')
-        reject = u"\n\n수신거부 : http://bit.ly/25nqNYG/".encode('utf-8')
+        reject = u"\n\n수신거부 : http://bit.ly/22HeuUO".encode('utf-8')
 
         teachers = db.session.query(Teacher).\
                     filter(Teacher.school.like('%' + school + '%')).\
