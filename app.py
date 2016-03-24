@@ -18,19 +18,31 @@ def index():
         subject = request.form['subject'].encode('utf-8')
         limit = int(request.form['limit'])
         content = request.form['content'].encode('utf-8')
+        reject = u"\n\n수신거부 : http://bit.ly/25nqNYG"
 
         teachers = db.session.query(Teacher).\
                     filter(Teacher.school.like('%' + school + '%')).\
                     filter(Teacher.subject.like('%' + subject + '%')).\
+                    filter(Teacher.contact != -1).\
                     order_by("id desc").\
                     limit(limit)
 
         for teacher in teachers:
-            send_message(teacher, content)
+            send_message(teacher, content + reject + teacher.phone)
 
         return render_template('index.html', message = u'총 {0}명의 선생님에게 전송하였습니다!'.format(teachers.count()))
     else:
         return render_template('index.html')
+
+@app.route('/reject/<phone>', methods=['GET'])
+def reject(phone):
+    try:
+        db.session.query(Teacher).filter(Teacher.phone == phone).update({ Teacher.contact: -1 })
+        db.session.commit()
+    except:
+        return "수신 거부 실패"
+
+    return "성공적으로 수신 거부하였습니다."
 
 
 def send_message(teacher, message):
@@ -48,8 +60,8 @@ def send_message(teacher, message):
                 'dest_phone': teacher.phone,
             },
         )
-        if response.status_code == 200:
-            print ('Error ' + response.status_code)
+        if response.status_code != 200:
+            print (u'Error')
         #     print u'{0} 선생님에게 메시지 전송'.format(teacher.name)
         # else:
     except requests.exceptions.RequestException:
